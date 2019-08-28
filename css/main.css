@@ -1,0 +1,19 @@
+* {
+  font-family: "Helvetica Neue", "Helvetica", "Calibri", sans-serif;
+}
+
+body {
+  padding: 12px;
+  background-color: #96D4FD;
+}
+
+#title {
+  font-size: 32pt;
+  font-weight: bold;
+  padding-bottom: 12px;
+}
+
+#content {
+  font-size: 16pt;
+  text-align: justify;
+}
