@@ -17,3 +17,24 @@ body {
   font-size: 16px;
   text-align: justify;
 }
+
+#content h2 {
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 20px
+}
+
+#content button {
+  font-size: 12pt;
+  background-color: #FFFFFF;
+  border: 1px solid black;
+  color: #000000;
+  padding: 4px 6px 4px 6px;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+#content button:hover {
+  color: #FFFFFF;
+  background-color: #000000;
+  transition: 0.2s;
+}
