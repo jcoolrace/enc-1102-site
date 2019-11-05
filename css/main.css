@@ -25,11 +25,13 @@ body {
 }
 
 #content button {
+  display: block;
   font-size: 12pt;
   background-color: #FFFFFF;
   border: 1px solid black;
   color: #000000;
   padding: 4px 6px 4px 6px;
+  margin: 8px 0 8px 0;
   transition: color 0.2s, background-color 0.2s;
 }
 
@@ -37,4 +39,8 @@ body {
   color: #FFFFFF;
   background-color: #000000;
   transition: 0.2s;
+}
+
+a {
+  text-decoration: none;
 }
