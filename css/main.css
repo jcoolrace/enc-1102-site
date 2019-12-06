@@ -1,27 +1,91 @@
+:root {
+  --main-background-color: #0d47a1
+}
+
 * {
   font-family: "Helvetica Neue", "Helvetica", "Calibri", sans-serif;
 }
 
 body {
-  padding: 12px;
-  background-color: rgb(188, 228, 255);
+  padding: 0;
+  margin: 0;
+  /* background-color: rgb(188, 228, 255); */
+}
+
+#heading {
+  background-color: var(--main-background-color);
+  color: #FFF;
+  margin-bottom: 20px;
+  box-shadow: 0 7px 5px #0A3880;
 }
 
 #title {
   font-size: 32pt;
   font-weight: bold;
-  padding-bottom: 12px;
+  padding-bottom: 20px;
+  text-align: center;
 }
 
 #content {
+  margin-top: 0;
+  /* margin-top: 0; */
+  /* padding: 12px; */
+  padding-bottom: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
   font-size: 16px;
   text-align: justify;
+  background-color: #FFF;
+  color: #000;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1065px) {
+  #content {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  [id^="canvas-wrapper"] {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  [id^="canvas-wrapper"], [id^="canvas-wrapper"] canvas {
+    /* width: 100%; */
+    width: 464px;
+  }
+}
+
+@media screen and (min-width: 1065px) {
+  #content {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  [id^="canvas-wrapper"] {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  [id^="canvas-wrapper"], [id^="canvas-wrapper"] canvas {
+    width: 612px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  [id^="canvas-wrapper"], [id^="canvas-wrapper"] canvas {
+    width: 100%;
+  }
 }
 
 #content h2 {
   font-weight: bold;
   text-decoration: underline;
-  font-size: 20px
+  font-size: 20px;
 }
 
 #content button {
@@ -41,6 +105,56 @@ body {
   transition: 0.2s;
 }
 
+br {
+  display: block;
+  margin-top: 12px;
+  content: "";
+}
+
 a {
   text-decoration: none;
+  color: #000;
+}
+
+[id^="canvas-wrapper"] {
+  text-align: center;
+  margin-top: 20px;
+}
+
+[id^="canvas-wrapper"] .subtitle {
+  margin-top: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+[id^="canvas-wrapper"] .subtitle:hover {
+  margin-top: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: #FFF;
+  background-color: #000;
+}
+
+#the-canvas, [id^="the-canvas"] {
+  text-align: center;
+  border: 2px solid black;
+}
+
+.outcome-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 18px;
+  margin-bottom: 6px;
+}
+
+.page-list {
+  margin-top: 24px;
+}
+
+.page-list a {
+  font-size: 24px;
+  font-weight: bold;
+  display: block;
+  margin-top: 6px;
+  margin-bottom: 6px;
 }

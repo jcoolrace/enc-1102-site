@@ -1,0 +1,12 @@
+<div id="heading">
+  {% include tabs.html %}
+  
+    <div id="title">
+      {% if page.title == "Home" %}
+      Jerrett Longworth
+      {% endif %}
+      {% if page.title != "Home" %}
+      {{ page.title }}
+      {% endif %}
+    </div>
+</div>
