@@ -19,5 +19,44 @@ title: Home
           <a href="process-work.html">Process Work</a>
         </div>
     </div>
+
+    <script>
+      function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+      }
+
+      document.getElementById("title").addEventListener("click", async function(){
+        var heading = document.getElementById("heading");
+        var content = document.getElementById("content");
+        heading.style.transform = "scaleX(0)";
+
+        await sleep(900);
+
+        heading.style.transform = "initial";
+        content.style.transform = "scaleY(50)";
+
+        await sleep(1000);
+
+        heading.style.transform = "rotate(180deg)";
+        content.style.transform = "rotate(95deg)";
+
+        await sleep(3000);
+
+        heading.style.height = "0px";
+        content.style.transform = "initial";
+        content.innerHTML = "";
+        content.style.height = "100%";
+        content.style.width = "100%";
+        content.style.backgroundImage = "url('res/explosion.gif')";
+        content.style.backgroundSize = "100% 100%";
+
+        await sleep(2500);
+
+        content.style.opacity = "0%";
+        await sleep(1200);
+        content.style.backgroundImage = "";
+      });
+
+    </script>
   </body>
 </html>
