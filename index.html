@@ -28,6 +28,8 @@ title: Home
       document.getElementById("title").addEventListener("click", async function(){
         var heading = document.getElementById("heading");
         var content = document.getElementById("content");
+        heading.style.transition = "all 1s ease-in";
+        content.style.transition = "all 1s linear";
         heading.style.transform = "scaleX(0)";
 
         await sleep(900);
